@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import utils from './utils';
+import Search from './components/Search';
 import User from './components/User';
 
 class App extends Component {
@@ -32,10 +33,7 @@ class App extends Component {
 		return (
 			<>
 				<div className="head">
-					<div className="search">
-						<p>Search:</p>
-						<input type="search" onChange={this.handleSearchChange}/>
-					</div>
+					<Search handleSearchChange={this.handleSearchChange} />
 					<button onClick={this.getUsers}>Add</button><br/><br/>
 				</div>
 				{users}
