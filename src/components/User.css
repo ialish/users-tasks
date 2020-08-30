@@ -1,0 +1,31 @@
+.user {
+	border: 1px solid;
+	width: 315px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	padding-left: 20px;
+	line-height: 25px;
+}
+
+.user label {
+	position: absolute;
+}
+
+.user input {
+	margin-left: 75px;
+}
+
+.user button {
+	width: 85px;
+}
+
+.otherData {
+	border: 1px solid;
+	border-radius: 20px;
+	width: 300px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-left: -10px;
+	background-color: rgb(230, 230, 230);
+}
