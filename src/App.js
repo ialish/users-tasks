@@ -21,9 +21,11 @@ class App extends Component {
 			<User key={user.id} user={user} />);
 		return (
 			<>
-				<div className="search">
-					Search
-					<input type="text"/>
+				<div className="head">
+					<div className="search">
+						<p>Search:</p>
+						<input type="text"/>
+					</div>
 					<button onClick={this.getUsers}>Add</button><br/><br/>
 				</div>
 				{users}

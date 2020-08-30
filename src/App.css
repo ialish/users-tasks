@@ -1,11 +1,23 @@
-.search {
+.head {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	width: 360px;
-	margin-left: 10px;
 }
 
-.search button {
-	width: 70px;
+.search {
+	display: flex;
+	align-items: center;
+}
+
+.search p {
+	margin-right: 10px;
+}
+
+.search input {
+	width: 100px;
+	margin-right: 10px;
+}
+
+.head button {
+	width: 55px;
 }
