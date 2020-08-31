@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import utils from './utils';
 import Search from './components/Search';
-import User from './components/User';
+import UsersList from './components/UsersList';
 
 class App extends Component {
 	constructor(props) {
@@ -23,20 +23,18 @@ class App extends Component {
 	}
 
 	render() {
-		const users = this.state.users
-			.filter(({ name, email }) => (
-				name.toLowerCase().includes(this.state.searchField.toLowerCase()) ||
-				email.toLowerCase().includes(this.state.searchField.toLowerCase())
-			))
-			.map(user => <User key={user.id} user={user} />);
-		
+		const filteredUsers = this.state.users.filter(({ name, email }) => 
+			name.toLowerCase().includes(this.state.searchField.toLowerCase()) || 
+			email.toLowerCase().includes(this.state.searchField.toLowerCase())
+		);
+			
 		return (
 			<>
 				<div className="head">
 					<Search handleSearchChange={this.handleSearchChange} />
 					<button onClick={this.getUsers}>Add</button><br/><br/>
 				</div>
-				{users}
+				<UsersList users={filteredUsers} />
 			</>
 		);
 	}
