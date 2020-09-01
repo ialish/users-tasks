@@ -1,6 +1,6 @@
 .user {
 	border: 1px solid;
-	width: 315px;
+	width: 265px;
 	margin-bottom: 10px;
 	padding: 10px;
 	padding-left: 20px;
@@ -15,16 +15,27 @@
 	margin-left: 75px;
 }
 
-.user button {
-	width: 85px;
-}
-
-.otherData {
+.other-data {
 	border: 1px solid;
 	border-radius: 20px;
-	width: 300px;
 	padding: 10px;
 	margin-top: 5px;
 	margin-left: -10px;
+	margin-bottom: 30px;
 	background-color: rgb(230, 230, 230);
+}
+
+.other-data-button {
+	margin-top: 10px;
+}
+
+.update-delete-buttons {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -20px;
+}
+
+.delete-button {
+	margin-left: 10px;
+	margin-right: 13px;
 }
