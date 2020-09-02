@@ -7,11 +7,11 @@
 	line-height: 25px;
 }
 
-.user label {
+form label {
 	position: absolute;
 }
 
-.user input {
+form input {
 	margin-left: 75px;
 }
 

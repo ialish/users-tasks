@@ -18,8 +18,19 @@ class App extends Component {
 		this.setState({ users });
 	}
 
-	handleSearchChange = (e) => {
-		this.setState({ searchField: e.target.value });
+	handleSearchChange = (event) => {
+		this.setState({ searchField: event.target.value });
+	}
+
+	handleUserChange = (userObj) => {
+		let users = [ ...this.state.users ];
+		console.log('users:', users)
+		const userIndex = users.findIndex(user => user.id === userObj.id);
+		
+		console.log('users1:', users[userIndex])
+		users[userIndex] = userObj;			
+		console.log('users2:', users[userIndex])
+		this.setState({ users });
 	}
 
 	render() {
@@ -27,14 +38,14 @@ class App extends Component {
 			name.toLowerCase().includes(this.state.searchField.toLowerCase()) || 
 			email.toLowerCase().includes(this.state.searchField.toLowerCase())
 		);
-			
+
 		return (
 			<>
 				<div className="head">
 					<Search handleSearchChange={this.handleSearchChange} />
-					<button onClick={this.getUsers}>Add</button><br/><br/>
+					<button className="add-button" /* onClick={} */>Add</button><br/><br/>
 				</div>
-				<UsersList users={filteredUsers} />
+				<UsersList users={filteredUsers} onUserChange={this.handleUserChange} />
 			</>
 		);
 	}
