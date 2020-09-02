@@ -42,6 +42,7 @@ class User extends Component {
 				city: '', 
 				zipcode: ''
 			};
+			this.setState({ user });
 		}
 		this.props.onUserChange(user);
   }

@@ -24,12 +24,9 @@ class App extends Component {
 
 	handleUserChange = (userObj) => {
 		let users = [ ...this.state.users ];
-		console.log('users:', users)
 		const userIndex = users.findIndex(user => user.id === userObj.id);
 		
-		console.log('users1:', users[userIndex])
-		users[userIndex] = userObj;			
-		console.log('users2:', users[userIndex])
+		users[userIndex] = userObj;
 		this.setState({ users });
 	}
 
@@ -43,7 +40,7 @@ class App extends Component {
 			<>
 				<div className="head">
 					<Search handleSearchChange={this.handleSearchChange} />
-					<button className="add-button" /* onClick={} */>Add</button><br/><br/>
+					<button className="add-button">Add</button><br/><br/>
 				</div>
 				<UsersList users={filteredUsers} onUserChange={this.handleUserChange} />
 			</>
