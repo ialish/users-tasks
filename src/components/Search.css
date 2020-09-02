@@ -1,13 +1,13 @@
-.search {
+.Search {
 	display: flex;
 	align-items: center;
 }
 
-.search p {
+.Search p {
 	margin-right: 10px;
 }
 
-.search input {
+.Search input {
 	width: 120px;
-	margin-right: 10px;
+	margin-right: 40px;
 }

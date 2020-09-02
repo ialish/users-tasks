@@ -37,13 +37,13 @@ class App extends Component {
 		);
 
 		return (
-			<>
+			<div className="App">
 				<div className="head">
 					<Search handleSearchChange={this.handleSearchChange} />
 					<button className="add-button">Add</button><br/><br/>
 				</div>
 				<UsersList users={filteredUsers} onUserChange={this.handleUserChange} />
-			</>
+			</div>
 		);
 	}
 }

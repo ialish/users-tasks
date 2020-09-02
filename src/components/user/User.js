@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './User.css';
-import utils from '../utils';
+import utils from '../../utils';
 
 class User extends Component {
 	constructor(props) {
@@ -66,7 +66,7 @@ class User extends Component {
 		}
 
 		return (
-			<div className="user">
+			<div className="User">
 				<div className="user-main" style={styles.userMain}>
 					<label onClick={() => this.setState({ highlightId: !this.state.highlightId })}>
 						ID: {id}
@@ -110,12 +110,25 @@ class User extends Component {
 				</div>
 
 				<div className="user-details" style={styles.userDetails}>
-					<h1>This is another half of a page</h1>
-					<h1>This is another half of a page</h1>
-					<h1>This is another half of a page</h1>
-					<h1>This is another half of a page</h1>
-					<h1>This is another half of a page</h1>
-					<h1>This is another half of a page</h1>
+					<div className="todos">
+						<div className="head">
+							Todos - User {id}
+							<button className="add-button">Add</button><br/><br/>
+						</div>
+						<div className="block">
+
+						</div>
+					</div>
+
+					<div className="posts">
+						<div className="head">
+							Posts - User {id}
+							<button className="add-button">Add</button><br/><br/>
+						</div>
+						<div className="block">
+
+						</div>
+					</div>
 				</div>
 			</div>
 		);
